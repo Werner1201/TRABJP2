@@ -85,7 +85,7 @@ function mudaPrecos(res, objeto) {
   res.write(`</script>`)
 }
 
-function criaPage(objeto, res) {
+function criaPageProd(objeto, res) {
   console.log(objeto);
   res.writeHead(200, { 'Content-Type': 'text/html; charset=UTF-8' });
   //Cabeca
@@ -112,7 +112,7 @@ function criaPage(objeto, res) {
 
   res.write(`
   <section>
-  <img src="https://i.imgur.com/NxFfiWo.png" alt="${objeto.desc}"/>
+  <img src="${objeto.link}" alt="${objeto.desc}"/>
 
   <p class="paragrafo"><span class="TituloSpan">Valor inicial do ${objeto.desc}: R$ ${objeto.preco}</span></p>
   
@@ -194,4 +194,7 @@ function criaPage(objeto, res) {
   res.end();
 }
 
-module.exports = criaPage;
+
+
+
+module.exports = criaPageProd;
