@@ -8,7 +8,6 @@ const criaPageProd = require("./view/roetadorView");
 
 http.createServer((req, res) => {
   let id = pegaUrl(url, req);
-  //criaPageProd(ppModelo(pegaProd(id, res), 0), res);
   pegaProd(id, res, (result) => {
     criaPageProd(ppModelo(result, 0), res);
   });
