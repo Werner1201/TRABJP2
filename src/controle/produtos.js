@@ -3,7 +3,6 @@ const conexao = require("../../conectaDB");
 
 function pegaProduto(idProd, res, callback) {
   let operacao = `SELECT * FROM produtos WHERE id= ?`;
-  console.log(idProd);
 
   conexao.getConnection(function (err, connection) {
     if (err) throw err; // not connected!
